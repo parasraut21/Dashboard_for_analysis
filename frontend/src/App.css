@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.tabsClass {
+  margin: 1vw 2vw;
+}
+.app-container {
+  position: relative;
+}
+/* Hero.module.css */
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.borderGlow {
+  animation: glow 2s infinite;
+}
+
+
+.stars-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Ensure the stars canvas appears behind other components */
+}
+
+.header, .tabs-row {
+  position: relative;
+  z-index: 20; /* Ensure the header and tabsrow appear on top of the stars canvas */
+}
+
+/* Add styles for other components if needed */
+
+.cardText {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardDiv {
+  transition: transform 0.2s ease-in-out;
+}
+
+.cardDiv:hover{
+  transform: scale(0.9);
+  background-color: thistle;
+}
